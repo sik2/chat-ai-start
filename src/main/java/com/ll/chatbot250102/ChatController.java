@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
-@RequestMapping("/api")
+@RequestMapping("/api/v1/chat")
 @RestController
 public class ChatController {
     private final OpenAiChatModel openAiChatModel;
@@ -18,7 +18,7 @@ public class ChatController {
         this.openAiChatModel = openAiChatModel;
     }
 
-    @GetMapping("/chat")
+    @GetMapping("/ai")
     public Map<String, String> chat(@RequestBody String message) {
         Map<String, String> responses = new HashMap<>();
 
